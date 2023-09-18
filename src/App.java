@@ -15,6 +15,18 @@ public class App {
         int slut = tangentbord.nextInt();
         String TextDel = text1.substring(start, slut);
         System.out.println("Delen är \""+TextDel+"\"");
+        tangentbord.nextLine();
+        System.out.print("Vad du letar efter: ");
+        String LetarText = tangentbord.nextLine();
+        boolean HittaText = text1.equals(LetarText);
+        System.out.println(HittaText);
+        System.out.print("Vilken text vill du sätta in: ");
+        String NyDel = tangentbord.nextLine();
+        System.out.print("Vilken text vill du byta ut: ");
+        String GammalDel = tangentbord.nextLine();
+        System.out.println(text1.replace(NyDel, GammalDel));
+
+
     tangentbord.close();
     }
 }
